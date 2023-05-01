@@ -24,6 +24,7 @@ function App() {
           message: "Sending cart data",
         })
       );
+      
       const response = await fetch(
         "https://react-http-bf638-default-rtdb.europe-west1.firebasedatabase.app/cart.json",
         { method: "PUT", body: JSON.stringify(cart) }
@@ -43,6 +44,7 @@ function App() {
     };
 
     if(isInitial) {
+      isInitial = false;
       return;
     }
 
